@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Мои главные ценности</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f5;--ink:#2a1216;--mut:#8a6b70;--acc:#7a1426;--acc2:#a3243b;--card:#fff;--line:#ead9db;--chip:#f5e8ea;--bad:#c0182f}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a0c0f;--ink:#f6e9ea;--mut:#b99ba0;--acc:#e07a8c;--acc2:#c9485f;--card:#26131a;--line:#442129;--chip:#33191f;--bad:#ff6b7f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a0c0f;--ink:#f6e9ea;--mut:#b99ba0;--acc:#e07a8c;--acc2:#c9485f;--card:#26131a;--line:#442129;--chip:#33191f;--bad:#ff6b7f;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:130px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 Inter,system-ui,sans-serif}
+header{background:linear-gradient(135deg,#5c0f1d,#8c1a2f);color:#fff;padding:32px 20px 40px}
+.w{max-width:980px;margin:0 auto}
+h1{font:800 clamp(28px,5.5vw,44px)/1.1 "Playfair Display",Georgia,serif;margin:0 0 8px}
+header p{margin:0;opacity:.9;max-width:620px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 20px}
+.bar .w{display:flex;flex-direction:column;gap:8px}
+.pr{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--mut);flex-wrap:wrap}
+.tr{flex:1;min-width:80px;height:6px;background:var(--chip);border-radius:9px;overflow:hidden}
+.tr b{display:block;height:100%;width:0;background:var(--acc2);transition:width .25s}
+button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--card);color:var(--acc);border-radius:99px;padding:6px 14px;cursor:pointer}
+button.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+nav{display:flex;gap:4px;overflow-x:auto}
+nav a{flex:none;min-width:30px;text-align:center;padding:3px 8px;border-radius:8px;color:var(--acc);text-decoration:none;font-weight:500;font-size:14px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+main{padding:20px 20px 60px;display:grid;gap:18px}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+h2{margin:0;padding:12px 18px;background:var(--acc);color:#fff;font:600 20px "Playfair Display",Georgia,serif;display:flex;justify-content:space-between;align-items:baseline}
+h2 small{font:400 13px Inter,sans-serif;opacity:.8}
+ul,ol{list-style:none;margin:0;padding:6px 18px}
+ul{display:grid;grid-template-columns:1fr 1fr;column-gap:36px}
+li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:9px 0;border-bottom:1px solid var(--line)}
+li>span{flex:1;min-width:0}
+li em{font-style:normal;color:var(--mut);font-size:12px;width:26px;text-align:right}
+.sc{flex:0 0 100%;display:grid;grid-template-columns:repeat(10,1fr);gap:4px;padding-bottom:4px}
+.sc button{padding:0;height:38px;min-width:0;border-radius:8px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:500 15px Inter,sans-serif;font-variant-numeric:tabular-nums}
+.sc button.on{background:var(--acc2);border-color:var(--acc2);color:#fff;font-weight:600}
+.sc button.t{opacity:.35}
+li.d .sc{outline:1.5px solid var(--bad);outline-offset:3px;border-radius:8px}
+@media(max-width:400px){.sc{gap:3px}.sc button{font-size:14px}}
+.hi{color:var(--acc);font-weight:500}
+.d{border-color:var(--bad)!important}
+.msg{padding:0 20px;color:var(--bad);font-size:14px;min-height:0}
+.info{padding:14px 18px;color:var(--mut);font-size:15px}
+.r{display:flex;align-items:center;gap:16px;padding:12px 0}
+.r b{font:800 34px/1 "Playfair Display",Georgia,serif;color:var(--acc);width:52px;text-align:center}
+.r span{font-size:18px;flex:1}.r small{color:var(--mut)}
+.row{display:flex;gap:10px;flex-wrap:wrap;padding:6px 18px 18px}
+@media(max-width:640px){ul{grid-template-columns:1fr}}
+</style>
+<header><div class="w"><h1>Мои главные ценности</h1><p id="sub"></p></div></header>
+<div class="bar"><div class="w"><div class="pr"><span id="p"></span><div class="tr"><b id="b"></b></div><button id="act" class="p"></button><button id="rs">Начать заново</button></div><nav id="nav"></nav><div class="pr" id="sy"></div></div></div>
+<div class="msg w" id="m" role="alert"></div>
+<main class="w" id="o"></main>
+<script>
+const raw="Агрессивность,Азарт,Аккуратность,Активность,Альтруизм,Амбиции,Анализ,Аристократизм,Артистизм,Баланс,Бдительность,Безопасность,Бережливость,Бескорыстие,Беспристрастность,Бесстрашие,Бесхитростность,Благоговения,Благожелательность,Благодарность,Благо благодарить,Благородство,Блаженство,Блеск,Близок,Благосостояние,Благотворительность,Благочестия,Богатство,Бодрость,Быстрота,Важность,Вдохновения,Вежливость,Великодушие,Великолепие,Величая,Вера,Верность,Верховенство,Веселье,Взаимодействия,Ведение,Вклад,Включённость,Влияние,Внимательность,Возбуждение,Воздействия,Воздержанность,Возможность,Волонтерство,Воля,Воображение,Воспитание,Восприимчивость,Восстановление сил,Восторг,Выгода,Вызов,Выигрыш,Выносливость,Выразительность,Галантность,Гармония,Гениальность,Героизм,Гибкость,Гигиена,Глубина,Гордость,Господство,Гостеприимство,Готовность,Действительность,Дерзость,Динамика,Дисциплина,Доблесть,Добродетель,Добросовестность,Доброта,Доверие,Долг,Долговечность,Доминирование,Достаток,Достижения,Достоверность,Достоинства,Доступность,Доходчивость,Драйв,Дружба,Дружелюбие,Дух,Духовность,Душа,Единство,Желание,Желание делиться,Жертва,Жёсткость,Живость,Жизнерадостность,Жизнеспособность,Жизнестойкость,Забава,Забота,Завершенность,Загадка,Защита окружающей среды,Здоровье,Знаменитость,Знания,Знатность,Значение,Значимость,Зрелость,Игривость,Известность,Изобилия,Изобретательность,Изысканность,Инвестирование,Индивидуальность,Индустриальность,Интеллект,Интенсивность,Инверсия,Интуитивность,Интуиция,Искренность,Искусственность,Искусство,Исследования,Компетентность,Комфорт,Контроль,Конфиденциальность,Концентрация,Корректность,Красота,Креативность,Кротость,Крутость,Кураж,Лёгкость,Лидерство,Ловкость,Логика,Лояльность,Любовь,Любознательность,Мастерство,Мечты,Милость,Мир,Многообразия,Могущество,Мода,Молодость,Мотивация,Мощь,Мудрость,Мужество,Мягкость,Наблюдательность,Набожность,Надежда,Надёжность,Настойчивость,Наука,Находчивость,Независимость,Неизменность,Необычность,Неожиданность,Неповторимость,Непорочность,Непостижимость,Непосредственность,Неприкосновенность личной жизни,Непринуждённость,Несоответствия,Обаяние,Обладание,Облегчение,Обожание,Обоснованность,Образование,Обучение,Обходительность,Общество,Общительность,Общность,Объединение,Объективность,Обязанность,Откровенность,Одарённость,Одобрение,Одухотворённость,Определённость,Опрятность,Оптимизм,Опыт,Организованность,Оригинальность,Осведомлённость,Освобождение,Осмотрительность,Основательность,Осознанность,Осторожность,Остроумие,Отвага,Ответственность,Отдых,Открытие,Открытость,Очарование,Партнёрство,Передача знаний,Перемены,Победа,Повышение качества,Подвижность,Подготовленность,Поддержка,Подтверждение,Поиск причины,Покой,Польза,Помощь,Понимание,Поощрение,Порядок,Популярный,Послушание,Постоянство,Поток,Почитание старших,Почтение,Правосудия,Правдивость,Праведность,Правильность,Прагматизм,Праздник,Практичный,Превосходство,Преданность,Предусмотрительность,Предчувствие,Преемственность,Премудрость,Приверженность традициям,Привлекательность,Привязанность,Признание,Признательность,Приключение,Прилежание,Приличие,Применимость,Принадлежность,Принятие,Природа,Приспособленность,Присутствие,Проактивность,Проворство,Продвижение,Продуктивность,Прозорливость,Проницательность,Простота,Профессионализм,Процветание,Прочность,Прямота,Пунктуальность,Работа,Работа в команде,Работоспособность,Радость,Радушие,Развитие,Развлечения,Различие,Размышление,Разнообразие,Разум,Расслабление,Рассудительность,Рациональность,Рвения,Реализация,Реализм,Результативность,Релаксация,Религиозность,Репутация,Рефлексия,Решимость,Решительность,Родина,Родственные узы,Рост,Руководство,Самоанализ,Самоконтроль,Самонаблюдение,Самообладание,Самоотверженность,Самопожертвования,Самоуважение,Самоуверенность,Свежий воздух,Свобода,Своевременность,Связь,Святость,Сдержанность,Сексуальность,Семья,Сердечность,Сила,Симпатия,Синергия,Скорость,Скромность,Слова,Служение,Смелость,Смирение,Смысл,Совершенство,Совместное деятельность,Совпадение,Согласие,Согласованность,Сознание,Солидарность,Соответствие,Соревнования,Сострадания,Сотрудничество,Сохранение,Сочувствие,Спокойствие,Спонтанность,Способность быстро восстанавливать физические и душевные силы,Справедливость,Стабильность,Старания,Статус,Стойкость,Страсть,Страховка,Стремление,Строгость,Структура,Супружество,Сходство,Счастье,Тайна,Твёрдость,Творчество,Тепло,Терпение,Тишина,Товарищество,Точность,Трансцендентность,Трезвость,Тщательность,Убедительность,Убеждённость,Уважение,Уверенность,Увлечённость,Удивление,Удовлетворение,Удовольствие,Уединение,Ум,Умение удержаться на плаву,Умеренность,Уникальность,Упорство,Управление,Уравновешенность,Усердия,Успех,Устойчивость,Утешение,Утончённость,Уход,Учтивость,Филантропия,Финансовая независимость,Фитнес,Фокус,Хитрость,Хитроумие,Хладнокровие,Хозяйство,Храбрость,Целесообразность,Целомудрия,Целостность,Ценность,Честность,Честолюбие,Честь,Чёткость,Чистоплотность,Частота,Чувственность,Чувствительность,Чувство собственного достоинства,Чудо,Чуткость,Шарм,Щедрость,Эйфория,Экономичность,Экспрессивность,Экстаз,Экстравагантность,Экстраверсия,Элегантность,Эмпатия,Энергия,Энтузиазм,Эпатаж,Этика,Этикет,Эффективность,Юмор,Яркость,Ясность";
+const W=raw.split(","),N=W.length,SZ=20,LK="values-game-v2";
+const $=i=>document.getElementById(i);
+const fresh=()=>({t:0,mode:"round",round:1,cands:W.map((_,i)=>i),sc:{}});
+let S=fresh(),dbDoc=null,tmr=null;
+try{const l=JSON.parse(localStorage.getItem(LK)||"null");if(l&&l.cands)S=l}catch(e){}
+function save(){S.t=Date.now();try{localStorage.setItem(LK,JSON.stringify(S))}catch(e){}
+  clearTimeout(tmr);tmr=setTimeout(()=>{if(dbDoc)dbDoc.set(S).then(()=>sync("Сохранено в вашем аккаунте"),()=>sync("Не удалось сохранить в аккаунте"))},500)}
+function sync(t){$("sy").textContent=t}
+function msg(t){$("m").textContent=t}
+const inRange=v=>v>=1&&v<=10;
+const sc=id=>`<div class="sc" role="radiogroup" aria-label="Оценка: ${W[id]}">`+[1,2,3,4,5,6,7,8,9,10].map(k=>{const on=+S.sc[id]===k;return `<button type="button" role="radio" data-i="${id}" data-v="${k}" aria-checked="${on}" class="${on?"on":""}">${k}</button>`}).join("")+"</div>";
+const paint=x=>{const id=x.dataset.i,v=+x.dataset.v,on=+S.sc[id]===v;x.classList.toggle("on",on);x.setAttribute("aria-checked",on);x.classList.toggle("t",S.mode==="final"&&!on&&S.cands.some(j=>j!=id&&+S.sc[j]===v))};
+function render(){
+  msg("");const o=$("o"),M=S.mode,c=S.cands;
+  $("rs").hidden=false;$("nav").innerHTML="";
+  if(M==="round"){
+    $("sub").innerHTML=`Круг ${S.round}: в игре ${c.length} ${c.length==N?"ценностей":"из "+N}. Оцените каждую от 1 до 10. Дальше пройдут только те, у которых оценка выше 7. Так до финала из 10 ценностей.`;
+    $("act").textContent="Завершить круг";$("act").hidden=false;
+    let h="",nv="";
+    for(let b=0;b*SZ<c.length;b++){const a=c.slice(b*SZ,b*SZ+SZ);nv+=`<a href="#B${b+1}">${b+1}</a>`;
+      h+=`<section id="B${b+1}"><h2>Блок ${b+1}<small>${b*SZ+1}–${b*SZ+a.length}</small></h2><ul>`+a.map((id,i)=>`<li><em>${b*SZ+i+1}</em><span>${W[id]}</span>${sc(id)}</li>`).join("")+"</ul></section>"}
+    o.innerHTML=h;$("nav").innerHTML=nv;
+  }else if(M==="final"){
+    $("sub").textContent="Финал: 10 ценностей. Дайте каждой свою оценку от 1 до 10, и все оценки должны быть разными. 10 — самая важная.";
+    $("act").textContent="Показать рейтинг";$("act").hidden=false;
+    o.innerHTML=`<section><h2>Финальная десятка<small>каждая оценка только один раз</small></h2><ol>`+c.map(id=>`<li data-i="${id}"><span class="hi">${W[id]}</span>${sc(id)}</li>`).join("")+"</ol></section>";
+    o.querySelectorAll("button[data-v]").forEach(paint);
+  }else{
+    $("sub").textContent="Ваш итоговый рейтинг ценностей.";$("act").hidden=true;
+    const r=[...c].sort((a,b)=>S.sc[b]-S.sc[a]);
+    o.innerHTML=`<section><h2>Рейтинг<small>от важной к менее важной</small></h2><ol>`+r.map(id=>`<li class="r"><b>${S.sc[id]}</b><span>${W[id]}</span></li>`).join("")+`</ol><div class="row"><button id="cp" class="p">Скопировать</button><button id="bk">Изменить оценки</button></div></section>`;
+    $("cp").onclick=()=>{const t=r.map(id=>S.sc[id]+". "+W[id]).join("\n");navigator.clipboard&&navigator.clipboard.writeText(t).then(()=>msg(""),()=>{});$("cp").textContent="Скопировано"};
+    $("bk").onclick=()=>{S.mode="final";save();render()};
+  }
+  upd();
+}
+function upd(){
+  const c=S.cands,done=c.filter(i=>inRange(+S.sc[i])).length;
+  $("p").textContent=S.mode==="result"?"Готово":`Оценено ${done} из ${c.length}`;
+  $("b").style.width=(S.mode==="result"?100:done/c.length*100)+"%";
+}
+$("o").addEventListener("click",e=>{const b=e.target.closest("button[data-v]");if(!b)return;
+  const id=b.dataset.i,v=+b.dataset.v;S.sc[id]=(+S.sc[id]===v)?"":v;delete S.warned;
+  if(S.mode==="final"){document.querySelectorAll("#o button[data-v]").forEach(paint);document.querySelectorAll("#o li.d").forEach(l=>l.classList.remove("d"));msg("")}
+  else b.parentElement.querySelectorAll("button").forEach(paint);
+  save();upd()});
+$("act").onclick=()=>{
+  const c=S.cands;
+  if(S.mode==="round"){
+    const un=c.filter(i=>!inRange(+S.sc[i])).length;
+    if(un&&!S.warned){S.warned=true;return msg(`Не оценено: ${un}. Они не пройдут дальше. Нажмите «Завершить круг» ещё раз, чтобы продолжить.`)}
+    delete S.warned;
+    const pass=c.filter(i=>+S.sc[i]>7);
+    if(pass.length<10)return msg(`Выше 7 только ${pass.length}, а нужно минимум 10. Пересмотрите оценки: поднимите те ценности, которые ближе всего.`);
+    if(pass.length===c.length&&pass.length>10)return msg(`Все ${pass.length} ценностей получили выше 7. Чтобы сузить список, оценивайте строже.`);
+    S.cands=pass;S.sc={};
+    if(pass.length===10)S.mode="final";else S.round++;
+    save();render();window.scrollTo(0,0);
+  }else{
+    const v=c.map(i=>+S.sc[i]);
+    if(v.some(x=>!inRange(x)))return msg("Поставьте оценку каждой из 10 ценностей.");
+    const dup=v.filter((x,i)=>v.indexOf(x)!==i);
+    if(dup.length){document.querySelectorAll("#o li").forEach(l=>l.classList.toggle("d",dup.includes(+S.sc[l.dataset.i])));return msg("Оценки повторяются. У каждой ценности должно быть своё место от 1 до 10.")}
+    S.mode="result";save();render();window.scrollTo(0,0);
+  }
+};
+let rsArm=false,rsT=null;
+$("rs").onclick=()=>{
+  if(!rsArm){rsArm=true;$("rs").textContent="Точно стереть всё?";clearTimeout(rsT);rsT=setTimeout(()=>{rsArm=false;$("rs").textContent="Начать заново"},4000);return}
+  rsArm=false;clearTimeout(rsT);$("rs").textContent="Начать заново";S=fresh();save();render();window.scrollTo(0,0)};
+render();
+sync("Прогресс сохраняется на этом устройстве");
+(async()=>{try{
+  if(!(window.claude&&claude.use))return;
+  const [db,user]=await Promise.all([claude.use("db"),claude.use("user")]);
+  const id=db&&user&&await user.id();if(!id)return;
+  dbDoc=db.collection("data/users/"+id).doc("values_state");
+  const s=await dbDoc.get(),d=s.exists?s.data():null;
+  if(d&&d.cands&&d.t>S.t){S=d;try{localStorage.setItem(LK,JSON.stringify(S))}catch(e){}render()}
+  else if(S.t>0)dbDoc.set(S);
+  sync("Прогресс сохраняется в вашем аккаунте и доступен на других устройствах");
+  dbDoc.onSnapshot(sn=>{const r=sn.exists&&sn.data();
+    if(r&&r.cands&&r.t>S.t&&!sn.metadata.hasPendingWrites&&!/INPUT|SELECT/.test(document.activeElement.tagName)){S=r;render()}});
+}catch(e){}})();
+</script>
+</body></html>
